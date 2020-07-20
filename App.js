@@ -1,12 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { View, StyleSheet} from 'react-native';
 import * as Font from 'expo-font';
-import { NavigationContainer } from '@react-navigation/native';
 import { AppLoading } from 'expo';
 
 import Drawer from './routes/Drawer';
-
 
 const getFonts = () => Font.loadAsync({
     'lucida': require('./assets/fonts/Lfax.ttf'),
@@ -30,6 +27,6 @@ export default function App() {
                 startAsync={getFonts}
                 onFinish={() => setFontsLoaded(true)}
             />
-        )        
-    }    
+        )
+    }
 }

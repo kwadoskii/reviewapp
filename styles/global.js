@@ -2,22 +2,22 @@ import { StyleSheet } from 'react-native'
 
 export const globalStyles = StyleSheet.create({
     container: {
+        flex: 1,
         padding: 20,
-        flex: 1
     },
-    error:{
+    error: {
         color: 'red',
         fontSize: 17,
         fontWeight: 'bold',
         marginVertical: 3,
-        paddingLeft: 6
+        paddingLeft: 6,
     },
     input: {
-        borderWidth: 1,
         borderColor: "#ddd",
         borderRadius: 6,
-        marginVertical: 10,
+        borderWidth: 1,
         fontSize: 20,
+        marginVertical: 10,
         padding: 10
     },
     paragraph: {
@@ -25,11 +25,11 @@ export const globalStyles = StyleSheet.create({
         lineHeight: 20
     },
     titleText: {
+        color: "#333",
         fontFamily: "lucida-bold",
         fontSize: 18,
-        color: "#333"
     },
-    
+
 });
 
 export const images = {

@@ -8,8 +8,8 @@ import AboutStack from './AboutStack';
 const Draw = createDrawerNavigator();
 const DrawNavigator = () => (
     <Draw.Navigator>
-        <Draw.Screen name="Reviews" component={HomeStack}/>
-        <Draw.Screen name="About App" component={AboutStack}/>
+        <Draw.Screen name="Reviews" component={HomeStack} />
+        <Draw.Screen name="About App" component={AboutStack} />
     </Draw.Navigator>
 )
 

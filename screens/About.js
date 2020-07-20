@@ -16,6 +16,5 @@ const styles = StyleSheet.create({
         fontFamily: 'lucida',
         fontSize: 20,
         lineHeight: 28
-
     }
 });
