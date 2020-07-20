@@ -1,21 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet} from 'react-native';
+import * as Font from 'expo-font';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppLoading } from 'expo';
+
+import Drawer from './routes/Drawer';
+
+
+const getFonts = () => Font.loadAsync({
+    'lucida': require('./assets/fonts/Lfax.ttf'),
+    'lucida-bold': require('./assets/fonts/Lfaxd.ttf')
+});
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    const [fontsLoaded, setFontsLoaded] = useState(false);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    if (fontsLoaded) {
+        return (
+            <>
+                <Drawer />
+                <StatusBar style="auto" />
+            </>
+        );
+    } else {
+        return (
+            <AppLoading
+                startAsync={getFonts}
+                onFinish={() => setFontsLoaded(true)}
+            />
+        )        
+    }    
+}
