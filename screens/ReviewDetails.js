@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import {} from "react-native";
 
 import { globalStyles, images } from "../styles/global";
 import Card from "../shared/Card";
